@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>Manage Feeds</title>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/manage.js"></script></head>
+<body>
+  <div id="registered-users" style="
+    position: absolute;
+    left: 45%;"> <b>Existing feeds:</b><br />
+    {% for feed in feeds %}
+      {{ feed.title }}<br />
+    {% endfor %}
+  </div>
+  <b>Add Feed</b>
+  <div users>
+  </div>
+  <div id="addFeed">
+    <form id="add-frm">
+      title: <input type="text" name="title" /> Description: <input
+        type="text" name="description" /> 
+    </form>
+    <button id="add-btn">Add Feed</button>
+  </div>
+  <br />
+
+  <b>Delete Feed</b>
+  <div id="deleteFeed">
+    <form id="delete-frm">
+      title: <input type="text" name="title" />
+    </form>
+    <button id="delete-btn">Delete Feed</button>
+  </div>
+</body>
+<script type='text/javascript'>
+  new ManageFeeds().init();
+</script>
+</html>
